@@ -1,7 +1,6 @@
 package be.kuleuven.mandelbrot;
 
-import be.kuleuven.jppf.TemplateJPPFTask;
-import org.jppf.client.JPPFJob;
+import be.kuleuven.jppf.ApplicationRunner;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,9 +13,6 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.Random;
 import java.util.Stack;
-import java.util.concurrent.Callable;
-import java.util.concurrent.CompletionService;
-import java.util.concurrent.ExecutionException;
 
 public class MandelBrotViewer extends JFrame {
 
@@ -290,23 +286,9 @@ public class MandelBrotViewer extends JFrame {
             protected Void doInBackground() throws Exception {
                 Random rnd = new Random();
 
-                for (int w = 0; w < width; w++) {
-                    setProgress((int)(100.0 * w / width));
+                ApplicationRunner t = new ApplicationRunner();
 
-                    for(int h = 0; h<height; h++) {
-
-                        // create a JPPF job
-                        JPPFJob job = new JPPFJob();
-
-                        // give this job a readable name that we can use to monitor and manage it.
-                        job.setName("Brian");
-
-                        // add a task to the job.
-                        job.add(new TemplateJPPFTask(w, h, rnd));
-
-
-                    }
-                }
+                t.createJob("Brian", rnd);
 
                 return null;
             }

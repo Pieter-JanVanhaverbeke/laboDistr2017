@@ -14,7 +14,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ *//*
+
 package be.kuleuven.jppf;
 
 import java.util.*;
@@ -22,19 +23,23 @@ import java.util.*;
 import org.jppf.client.*;
 import org.jppf.node.protocol.Task;
 
+*/
 /**
  * This is a template JPPF application runner.
  * It is fully commented and is designed to be used as a starting point
  * to write an application using JPPF.
  * @author Laurent Cohen
- */
+ *//*
+
 public class TemplateApplicationRunner {
 
-  /**
+  */
+/**
    * The entry point for this application runner to be run from a Java command line.
    * @param args by default, we do not use the command line arguments,
    * however nothing prevents us from using them if need be.
-   */
+   *//*
+
   public static void main(final String...args) {
 
     // create the JPPFClient. This constructor call causes JPPF to read the configuration file
@@ -58,20 +63,22 @@ public class TemplateApplicationRunner {
     }
   }
 
-  /**
+  */
+/**
    * Create a JPPF job that can be submitted for execution.
    * @param jobName an arbitrary, human-readable name given to the job.
    * @return an instance of the {@link JPPFJob JPPFJob} class.
    * @throws Exception if an error occurs while creating the job or adding tasks.
-   */
-  public JPPFJob createJob(final String jobName) throws Exception {
+   *//*
+
+  public JPPFJob createJob(final String jobName, int w, int h, Random rnd) throws Exception {
     // create a JPPF job
     JPPFJob job = new JPPFJob();
     // give this job a readable name that we can use to monitor and manage it.
     job.setName(jobName);
 
     // add a task to the job.
-    Task<?> task = job.add(new TemplateJPPFTask());
+    Task<?> task = job.add(new TemplateJPPFTask(w, h, rnd));
     // provide a user-defined name for the task
     task.setId(jobName + " - Template task");
 
@@ -82,11 +89,13 @@ public class TemplateApplicationRunner {
     return job;
   }
 
-  /**
+  */
+/**
    * Execute a job in blocking mode. The application will be blocked until the job execution is complete.
    * @param jppfClient the {@link JPPFClient} instance which submits the job for execution.
    * @throws Exception if an error occurs while executing the job.
-   */
+   *//*
+
   public void executeBlockingJob(final JPPFClient jppfClient) throws Exception {
     // Create a job
     JPPFJob job = createJob("Template blocking job");
@@ -103,12 +112,14 @@ public class TemplateApplicationRunner {
     processExecutionResults(job.getName(), results);
   }
 
-  /**
+  */
+/**
    * Execute a job in non-blocking mode. The application has the responsibility
    * for handling the notification of job completion and collecting the results.
    * @param jppfClient the {@link JPPFClient} instance which submits the job for execution.
    * @throws Exception if an error occurs while executing the job.
-   */
+   *//*
+
   public void executeNonBlockingJob(final JPPFClient jppfClient) throws Exception {
     // Create a job
     JPPFJob job = createJob("Template non-blocking job");
@@ -134,7 +145,8 @@ public class TemplateApplicationRunner {
     processExecutionResults(job.getName(), results);
   }
 
-  /**
+  */
+/**
    * Execute multiple jobs in parallel from the same JPPFClient.
    * <p>This is an extension of the {@code executeNonBlockingJob()} method, with one additional step:
    * to ensure that a sufficient number of connections to the server are present, so that jobs can be submitted concurrently.
@@ -148,7 +160,8 @@ public class TemplateApplicationRunner {
    * @param jppfClient the JPPF client which submits the jobs.
    * @param numberOfJobs the number of jobs to execute.
    * @throws Exception if any error occurs.
-   */
+   *//*
+
   public void executeMultipleConcurrentJobs(final JPPFClient jppfClient, final int numberOfJobs) throws Exception {
     // ensure that the client connection pool has as many connections
     // as the number of jobs to execute
@@ -187,12 +200,14 @@ public class TemplateApplicationRunner {
     }
   }
 
-  /**
+  */
+/**
    * Ensure that the JPPF client has the desired number of connections.  
    * @param jppfClient the JPPF client which submits the jobs.
    * @param numberOfConnections the desired number of connections.
    * @throws Exception if any error occurs.
-   */
+   *//*
+
   public void ensureNumberOfConnections(final JPPFClient jppfClient, final int numberOfConnections) throws Exception {
     // wait until the client has at least one connection pool with at least one avaialable connection
     JPPFConnectionPool pool = jppfClient.awaitActiveConnectionPool();
@@ -207,11 +222,13 @@ public class TemplateApplicationRunner {
     pool.awaitActiveConnections(Operator.AT_LEAST, numberOfConnections);
   }
 
-  /**
+  */
+/**
    * Process the execution results of each submitted task.
    * @param jobName the name of the job whose results are processed. 
    * @param results the tasks results after execution on the grid.
-   */
+   *//*
+
   public synchronized void processExecutionResults(final String jobName, final List<Task<?>> results) {
     // print a results header
     System.out.printf("Results for job '%s' :\n", jobName);
@@ -229,3 +246,4 @@ public class TemplateApplicationRunner {
     }
   }
 }
+*/
