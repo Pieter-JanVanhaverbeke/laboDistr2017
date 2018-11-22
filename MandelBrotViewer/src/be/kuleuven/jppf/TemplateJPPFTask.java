@@ -19,6 +19,11 @@ package be.kuleuven.jppf;
 
 import org.jppf.node.protocol.AbstractTask;
 
+import java.awt.*;
+import java.util.Random;
+
+import static be.kuleuven.mandelbrot.MandelBrotViewer.*;
+
 /**
  * This class is a template for a standard JPPF task.
  * There are 3 parts to a task that is to be executed on a JPPF grid:
@@ -29,17 +34,23 @@ import org.jppf.node.protocol.AbstractTask;
  * and handling an eventual uncaught {@link Throwable Throwable} that would result from this invocation.</li>
  * <li>getting the execution results: the task itself, after its execution, is considered as the result.
  * JPPF provides the convenience methods {@link org.jppf.node.protocol.Task#setResult(Object) setResult(Object)} and
- * {@link org.jppf.server.node.Task#getResult() getResult()}
  * to this effect, however any accessible attribute of the task will be available when the task is returned to the client.</li>
  * </ol>
  * @author Laurent Cohen
  */
 public class TemplateJPPFTask extends AbstractTask<String> {
+    private int w;
+    private int h;
+    private Random rnd;
+
   /**
    * Perform initializations on the client side,
    * before the task is executed by the node.
    */
-  public TemplateJPPFTask() {
+  public TemplateJPPFTask(int w, int h, Random rnd) {
+      this.w = w;
+      this.h = h;
+      this.rnd = rnd;
     // perform initializations here ...
   }
 
@@ -52,6 +63,53 @@ public class TemplateJPPFTask extends AbstractTask<String> {
     // write your task code here.
     System.out.println("Hello, this is the node executing a template JPPF task");
 
+    float r = 0, g = 0, b = 0;
+    for (int sample = 0; sample < superSamples; sample++) {
+      /*if(isCancelled()) {
+        return null;
+      }*/
+
+      // escape time algorithm
+      double x0, y0;
+      if (superSamples == 1) {
+        x0 = viewPort.getMinX() + (w + .5) / width * viewPort.getWidth();
+        y0 = viewPort.getMaxY() - (h + 0.5) / height * viewPort.getHeight();
+      } else {
+        x0 = viewPort.getMinX() + (w + rnd.nextDouble()) / width * viewPort.getWidth();
+        y0 = viewPort.getMaxY() - (h + rnd.nextDouble()) / height * viewPort.getHeight();
+      }
+      double x = 0;
+      double y = 0;
+
+      long iteration = 0;
+      long max_iteration = maxIterations;
+
+      while (x * x + y * y < 4 && iteration < max_iteration) {
+        double xtemp = x * x - y * y + x0;
+        y = 2 * x * y + y0;
+        x = xtemp;
+        iteration++;
+      }
+
+      // determine the color
+      Color color = Color.BLACK;
+      if (iteration < max_iteration) {
+        double quotient = (double) iteration / (double) max_iteration;
+        float c = (float) Math.pow(quotient, 1.0 / 3);
+        if (quotient > 0.5) {
+          // Close to the mandelbrot set the color changes from green to white
+          r += c;
+          g += 1.f;
+          b += c;
+        } else {
+          // Far away it changes from black to green
+          g += c;
+        }
+
+      }
+    }
+
+    image.setRGB(w,h,new Color(r/superSamples,g/superSamples,b/superSamples).getRGB());
     // ...
 
     // eventually set the execution results

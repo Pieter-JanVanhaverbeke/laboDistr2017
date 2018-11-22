@@ -1,5 +1,8 @@
 package be.kuleuven.mandelbrot;
 
+import be.kuleuven.jppf.TemplateJPPFTask;
+import org.jppf.client.JPPFJob;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -19,7 +22,7 @@ public class MandelBrotViewer extends JFrame {
 
 
     // frame related stuff
-    private int width, height;
+    public static int width, height;
     private JPanel imagePanel;
     private JToolBar toolBar;
     private JLabel statusLabel,calculationTimeLabel;
@@ -28,17 +31,18 @@ public class MandelBrotViewer extends JFrame {
     private JTextField superSamplesInput;
     private JTextField maxIterationsInput;
 
-    private BufferedImage image;
+    public static BufferedImage image;
     private Stack<Rectangle2D.Double> viewPortStack;
-    private Rectangle2D.Double viewPort,origViewPort;
+    public static Rectangle2D.Double viewPort;
+    private Rectangle2D.Double origViewPort;
 
     // mouse related stuff
     private boolean mouseDown;
     private Point mouseDownPoint , mouseDragPoint;
 
     // algorithm related stuff
-    int superSamples = 1;
-    int maxIterations = 1000;
+    public static int superSamples = 1;
+    public static int maxIterations = 1000;
     SwingWorker<Void,Void> swingWorker;
 
     public MandelBrotViewer(int width, int height) {
@@ -291,53 +295,16 @@ public class MandelBrotViewer extends JFrame {
 
                     for(int h = 0; h<height; h++) {
 
-                        float r = 0, g = 0, b = 0;
-                        for (int sample = 0; sample < superSamples; sample++) {
-                            if(isCancelled()) {
-                                return null;
-                            }
+                        // create a JPPF job
+                        JPPFJob job = new JPPFJob();
 
-                            // escape time algorithm
-                            double x0, y0;
-                            if (superSamples == 1) {
-                                x0 = viewPort.getMinX() + (w + .5) / width * viewPort.getWidth();
-                                y0 = viewPort.getMaxY() - (h + 0.5) / height * viewPort.getHeight();
-                            } else {
-                                x0 = viewPort.getMinX() + (w + rnd.nextDouble()) / width * viewPort.getWidth();
-                                y0 = viewPort.getMaxY() - (h + rnd.nextDouble()) / height * viewPort.getHeight();
-                            }
-                            double x = 0;
-                            double y = 0;
+                        // give this job a readable name that we can use to monitor and manage it.
+                        job.setName("Brian");
 
-                            long iteration = 0;
-                            long max_iteration = maxIterations;
+                        // add a task to the job.
+                        job.add(new TemplateJPPFTask(w, h, rnd));
 
-                            while (x * x + y * y < 4 && iteration < max_iteration) {
-                                double xtemp = x * x - y * y + x0;
-                                y = 2 * x * y + y0;
-                                x = xtemp;
-                                iteration++;
-                            }
 
-                            // determine the color
-                            Color color = Color.BLACK;
-                            if (iteration < max_iteration) {
-                                double quotient = (double) iteration / (double) max_iteration;
-                                float c = (float) Math.pow(quotient, 1.0 / 3);
-                                if (quotient > 0.5) {
-                                    // Close to the mandelbrot set the color changes from green to white
-                                    r += c;
-                                    g += 1.f;
-                                    b += c;
-                                } else {
-                                    // Far away it changes from black to green
-                                    g += c;
-                                }
-
-                            }
-                        }
-
-                        image.setRGB(w,h,new Color(r/superSamples,g/superSamples,b/superSamples).getRGB());
                     }
                 }
 
