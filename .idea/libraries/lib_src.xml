@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib-src">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-driver/lib-src/jppf-node-src-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-driver/lib-src/jppf-common-src-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-driver/lib-src/jppf-server-src-5.2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

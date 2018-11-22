@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib-src2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib-src/jppf-admin-src-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib-src/jppf-client-src-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib-src/jppf-common-src-5.2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

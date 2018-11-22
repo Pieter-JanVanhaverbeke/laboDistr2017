@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/jppf-common-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/jppf-jmxremote_optional-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/slf4j-api-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/lz4-1.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/slf4j-log4j12-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/jppf-node-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/jna-platform-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-node/lib/jna-4.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,30 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jung-visualization-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/groovy-all-1.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jppf-common-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jung-api-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/commons-io-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jppf-jmxremote_optional-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/miglayout-3.7-swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/looks-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/concurrent-1.3.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jcommon-1.0.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/rsyntaxtextarea-2.5.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jppf-client-5.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/colt-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jfreechart-1.0.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/lz4-1.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/slf4j-api-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jung-algorithms-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jung-graph-impl-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/slf4j-log4j12-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/collections-generic-4.01.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JPPF-5.2.8-admin-ui/lib/jppf-admin-5.2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

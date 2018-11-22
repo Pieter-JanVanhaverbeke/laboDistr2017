@@ -1,0 +1,6 @@
+2017-11-09 12:49:46,379 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(547)]: JPPF temp folder C:\Users\Wim\AppData\Local\Temp\.jppf
+2017-11-09 12:49:46,544 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: --------------------------------------------------------------------------------
+2017-11-09 12:49:46,544 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: JPPF Version: 5.2.8, Build number: 1910, Build date: 2017-08-10 06:14 CEST
+2017-11-09 12:49:46,544 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(82)]: starting driver with PID=1260, UUID=C68C144D-64A4-6A30-313A-3C129AE6BED3
+2017-11-09 12:49:46,544 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(83)]: --------------------------------------------------------------------------------
+2017-11-09 12:49:52,171 [INFO ][org.jppf.nio.NioConstants.getCheckConnection(81)]: NIO checks are enabled
