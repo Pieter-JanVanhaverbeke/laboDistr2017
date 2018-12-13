@@ -1,8 +1,8 @@
-2017-11-09 12:49:52,025 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(547)]: JPPF temp folder C:\Users\Wim\AppData\Local\Temp\.jppf
-2017-11-09 12:49:52,141 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: --------------------------------------------------------------------------------
-2017-11-09 12:49:52,142 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: JPPF Version: 5.2.8, Build number: 1910, Build date: 2017-08-10 06:14 CEST
-2017-11-09 12:49:52,142 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(82)]: starting node with PID=1512, UUID=E7783573-1315-F109-E5F3-43819BBD4A41
-2017-11-09 12:49:52,142 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(83)]: --------------------------------------------------------------------------------
-2017-11-09 12:49:52,825 [INFO ][org.jppf.classloader.ClassLoaderRequestHandler.run(156)]: maxBatchSize = 1
-2017-11-09 12:49:52,862 [INFO ][org.jppf.execute.AbstractExecutionManager.<init>(111)]: running 4 processing threads
-2017-11-09 12:49:52,863 [INFO ][org.jppf.execute.AbstractExecutionManager.createThreadManager(137)]: Using default thread manager
+2018-12-13 11:36:26,398 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(547)]: JPPF temp folder /tmp/.jppf
+2018-12-13 11:36:26,733 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: --------------------------------------------------------------------------------
+2018-12-13 11:36:26,733 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: JPPF Version: 5.2.8, Build number: 1910, Build date: 2017-08-10 06:14 CEST
+2018-12-13 11:36:26,734 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(82)]: starting node with PID=3130, UUID=97415048-EB72-6B83-18D1-E5A5836B1683
+2018-12-13 11:36:26,734 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(83)]: --------------------------------------------------------------------------------
+2018-12-13 11:36:27,044 [INFO ][org.jppf.classloader.ClassLoaderRequestHandler.run(156)]: maxBatchSize = 1
+2018-12-13 11:36:27,129 [INFO ][org.jppf.execute.AbstractExecutionManager.<init>(111)]: running 4 processing threads
+2018-12-13 11:36:27,130 [INFO ][org.jppf.execute.AbstractExecutionManager.createThreadManager(137)]: Using default thread manager

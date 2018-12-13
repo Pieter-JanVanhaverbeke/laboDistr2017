@@ -1,7 +1,5 @@
 package be.kuleuven.mandelbrot;
 
-import be.kuleuven.jppf.ApplicationRunner;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,7 +16,7 @@ public class MandelBrotViewer extends JFrame {
 
 
     // frame related stuff
-    public static int width, height;
+    public int width, height;
     private JPanel imagePanel;
     private JToolBar toolBar;
     private JLabel statusLabel,calculationTimeLabel;
@@ -27,9 +25,9 @@ public class MandelBrotViewer extends JFrame {
     private JTextField superSamplesInput;
     private JTextField maxIterationsInput;
 
-    public static BufferedImage image;
+    public BufferedImage image;
     private Stack<Rectangle2D.Double> viewPortStack;
-    public static Rectangle2D.Double viewPort;
+    public Rectangle2D.Double viewPort;
     private Rectangle2D.Double origViewPort;
 
     // mouse related stuff
@@ -288,7 +286,7 @@ public class MandelBrotViewer extends JFrame {
 
                 ApplicationRunner t = new ApplicationRunner();
 
-                t.createJob("Brian", rnd);
+                t.createJob(viewPort, image, width, height, "Brian", rnd);
 
                 return null;
             }

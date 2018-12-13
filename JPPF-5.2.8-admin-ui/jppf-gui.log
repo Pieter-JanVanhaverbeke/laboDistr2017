@@ -1,15 +1,15 @@
-2017-11-09 09:32:10,805 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(547)]: JPPF temp folder C:\Users\Wim\AppData\Local\Temp\.jppf
-2017-11-09 09:32:10,983 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/imports.groovy
-2017-11-09 09:32:11,224 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: --------------------------------------------------------------------------------
-2017-11-09 09:32:11,225 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: JPPF Version: 5.2.8, Build number: 1910, Build date: 2017-08-10 06:14 CEST
-2017-11-09 09:32:11,225 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(82)]: starting client with PID=12900, UUID=E73C7F63-CBE6-6841-8691-F669CDC8C1C8
-2017-11-09 09:32:11,226 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(83)]: --------------------------------------------------------------------------------
-2017-11-09 09:32:11,277 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(325)]: connection [driver1-1] created
-2017-11-09 09:32:11,288 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(76)]: [client: driver1-1 - ClassServer] Attempting connection to the class server at localhost:11111
-2017-11-09 09:32:11,302 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(83)]: [client: driver1-1 - ClassServer] Reconnected to the class server
-2017-11-09 09:32:11,302 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(70)]: [client: driver1-1 - TasksServer] Attempting connection to the task server at localhost:11111
-2017-11-09 09:32:11,368 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(84)]: [client: driver1-1 - TasksServer] Reconnected to the JPPF task server
-2017-11-09 09:32:11,544 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/imports.groovy
-2017-11-09 09:32:11,544 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/ChartsConfig.groovy
-2017-11-09 09:32:11,641 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/LoadBalancingSettings.groovy
-2017-11-09 09:32:11,820 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/FilterPanel.groovy
+2018-12-13 11:36:37,351 [INFO ][org.jppf.utils.FileUtils.initJPPFTempDir(547)]: JPPF temp folder /tmp/.jppf
+2018-12-13 11:36:37,920 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/imports.groovy
+2018-12-13 11:36:38,459 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(80)]: --------------------------------------------------------------------------------
+2018-12-13 11:36:38,460 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(81)]: JPPF Version: 5.2.8, Build number: 1910, Build date: 2017-08-10 06:14 CEST
+2018-12-13 11:36:38,460 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(82)]: starting client with PID=3225, UUID=905C78ED-2CFD-D102-EC21-F6D31637CD2B
+2018-12-13 11:36:38,461 [INFO ][org.jppf.utils.VersionUtils.logVersionInformation(83)]: --------------------------------------------------------------------------------
+2018-12-13 11:36:38,542 [INFO ][org.jppf.client.AbstractGenericClient.newConnection(325)]: connection [driver1-1] created
+2018-12-13 11:36:38,584 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(76)]: [client: driver1-1 - ClassServer] Attempting connection to the class server at localhost:11111
+2018-12-13 11:36:38,601 [INFO ][org.jppf.client.ClassServerDelegateImpl.init(83)]: [client: driver1-1 - ClassServer] Reconnected to the class server
+2018-12-13 11:36:38,605 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(70)]: [client: driver1-1 - TasksServer] Attempting connection to the task server at localhost:11111
+2018-12-13 11:36:38,692 [INFO ][org.jppf.client.TaskServerConnectionHandler.init(84)]: [client: driver1-1 - TasksServer] Reconnected to the JPPF task server
+2018-12-13 11:36:38,966 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/imports.groovy
+2018-12-13 11:36:38,967 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/ChartsConfig.groovy
+2018-12-13 11:36:39,041 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/LoadBalancingSettings.groovy
+2018-12-13 11:36:39,415 [DEBUG][org.jppf.ui.options.xml.OptionDescriptorParser.createScriptDescriptor(224)]: no protocol: org/jppf/ui/options/xml/FilterPanel.groovy
